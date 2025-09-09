@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "declaration": false,
+    "baseUrl": "./",
+    "paths": {
+      "@app/libs/*": ["../../libs/*"],
+      "@products/*": ["./src/*"]
+    },
+    "outDir": "../../dist/apps/products/"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "test", "**/*spec.ts"]
+}

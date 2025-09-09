@@ -1,0 +1,26 @@
+{
+  "name": "products",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "typeorm": "npx ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js -d ./typeorm.config.ts",
+    "typeorm:migration-generate": "node scripts/generate-migration.js",
+    "typeorm:migration-run": "npm run typeorm migration:run",
+    "typeorm:rollback-migration": "npm run typeorm migration:revert"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@nestjs/config": "^4.0.2",
+    "@nestjs/mapped-types": "*",
+    "@nestjs/typeorm": "^11.0.0",
+    "mysql2": "^3.14.4",
+    "typeorm": "^0.3.26"
+  }
+}
